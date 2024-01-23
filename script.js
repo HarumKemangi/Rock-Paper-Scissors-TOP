@@ -19,7 +19,9 @@ function blip() {
 
 function game(playerSelection, computerSelection) {
     computerSelection = choice[(Math.floor(Math.random() * choice.length))];
-    playerSelection = prompt("Rock, Paper, Scissors!");
+    let input = prompt("Rock, Paper, Scissors!");
+    playerSelection = input.charAt(0).toUpperCase() + input.slice(1);
+    console.log(playerSelection);
 
     if (!(choice.includes(playerSelection))) {
         console.warn("Invalid Value");
