@@ -1,1 +1,1 @@
-# Rock-Paper-Scissors-The-Odin-Project-
+Assignment for TOP project: Making Rock, Paper, Scissors game.
