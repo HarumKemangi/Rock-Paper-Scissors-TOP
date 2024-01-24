@@ -1,11 +1,15 @@
+//Variables for game scores, rounds, and choices
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
 let choice = ["Rock", "Paper", "Scissors"];
+
+//variables for game restart element
 const h1 = document.createElement("h1");
 const button = document.createElement("button");
 const div = document.querySelector("div");
 
+// Function to restart the game after done playing
 function blip() {
     div.appendChild(h1);
     h1.innerHTML = "Wanna Try Again?";
@@ -17,6 +21,7 @@ function blip() {
     })
 }
 
+// Function to start round, check win/tie/lose condition per-round, and check input from prompt 
 function game(playerSelection, computerSelection) {
     computerSelection = choice[(Math.floor(Math.random() * choice.length))];
     let input = prompt("Rock, Paper, Scissors!");
@@ -60,6 +65,7 @@ function game(playerSelection, computerSelection) {
     }
 }
 
+// Function loop for playing 5 round of rock-paper-scissors, check final result: win/tie/lose OR best out of 3 condition
 for (i = 0; i < 5; i++) {
     game();
 
@@ -98,5 +104,6 @@ for (i = 0; i < 5; i++) {
     }
 }
 
+// Calling function blip to show restart element
 blip()
 
