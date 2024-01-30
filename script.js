@@ -29,7 +29,7 @@ function game(playerSelection, computerSelection) {
     console.log(playerSelection);
 
     if (!(choice.includes(playerSelection))) {
-        console.warn("Invalid Value");
+        alert("Invalid Value");
     } else if ((playerSelection === "Paper" && computerSelection === "Rock") || 
         (playerSelection === "Rock" && computerSelection === "Scissors") ||
         (playerSelection === "Scissors" && computerSelection === "Paper")
